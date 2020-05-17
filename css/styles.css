@@ -1,0 +1,56 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    width: 100vw;
+}
+  
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Roboto', sans-serif;
+}
+  
+.back-ground {
+    width: 100vw;
+    height: 100vh;
+    opacity: 15%;
+    background: url(/assets/homeBack.png);
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: left center;
+    position: absolute;
+}
+
+.branding {
+    width: 120px;
+    padding-right: 10%;
+}
+
+.navbar-brand{
+    transition: transform 1s;
+}
+
+.navbar-brand:hover {
+    transform: scale(1.05);
+}
+
+#overlayer {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 99998;
+    background: #fff;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+.loader {
+    width: 300px;
+    position: fixed;
+    z-index: 99999;
+    overflow: visible;
+}
+
+.avatar {
+    width: 40%;
+    border-radius: 50%;
+    padding: 10px;
+}

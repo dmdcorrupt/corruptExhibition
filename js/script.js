@@ -1,11 +1,4 @@
-const navBrand = document.querySelector('.navbar-brand');
-navBrand.addEventListener('mouseenter', addPulse);
-navBrand.addEventListener('animationend', removePulse);
-
-const navLinks = document.querySelectorAll('.nav-link');
-navLinks.forEach(navLink => navLink.addEventListener('mouseenter', addPulse));
-navLinks.forEach(navLink => navLink.addEventListener('animationend', removePulse));
-
+//animates nav elements
 function addPulse(e){
   this.classList.add('animated', 'pulse');
 }
@@ -13,3 +6,18 @@ function addPulse(e){
 function removePulse(e){
   this.classList.remove('animated', 'pulse');
 }
+
+//function for adding shadow to navbar when scrolling
+$(function () {
+  $(document).scroll(function () {
+    var $nav = $(".sticky-top");
+    $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+  });
+});
+
+//fades preloader out after assets have loaded
+$(window).on('load', function() {
+  $(".loader").delay(4000).fadeOut("slow");
+  $(".hidden").delay(4000).fadeOut("slow");
+  $("#overlayer").delay(4000).fadeOut("slow");
+})
