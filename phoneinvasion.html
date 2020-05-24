@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+	<html>
+		<head>
+			<title>Phone Invasion</title>
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+			<link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" />
+			<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+			integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+			crossorigin=""></script>
+			<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+			<link href="https://fonts.googleapis.com/css?family=Raleway|Roboto" rel="stylesheet">
+			<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+			<link rel="stylesheet" href="Morgscss/styles.css">
+			<link rel="icon" href="Morgsimages/phone invasion logo.png">
+		</head>
+		<body>
+			<nav class="navbar navbar-expand-md navbar-light text-uppercase" style="background-color: white;">
+				<div class="col-md-1"></div>
+				<a href="/index.html">
+					<img src="Morgsimages/coruptedTransparentIcon.png" class="navbar-brand branding">
+				</a>
+				<button class="navbar-toggler text-uppercase text-white rounded" style="background-color: #720429;" data-toggle="collapse" data-target="#mobileMenu">
+					<i class="fas fa-bars"></i>
+				</button>
+				<div class="collapse navbar-collapse" id="mobileMenu">
+					<ul class="navbar-nav">
+						<li class="nav-item">
+                            <a class="nav-link" href="/boris.html">BorisBot</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/phoneinvasion.html">Phone Invasion</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/glitch.html">Setback</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/mostlyhuman.html">Mostly Human 2059</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/videogames.html">Video Games Are Art</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/multisensory.html">Multisensory Synergy</a>
+                        </li>
+					</ul>
+				</div>
+				<div class="col-md-1"></div>
+			</nav>		
+			<section class="headerContainer">
+				<a id="myBtn">
+					<h1 id="questionMark">?</h1>
+				</a>
+				<div id="myModal" class="modal">
+
+				<!-- Modal content -->
+				<div class="modal-content">
+					<h1 id="statementTitle">Supporting Statement</h1>
+					<hr id="modalHr">
+					<p id="statementBody">
+						Thanks to the advances in modern technology, specifically smartphones and tablets, the amount of private information 
+						people are sharing online is growing and with it the threats and dangers to our data is growing at a commensurate rate. 
+						Medical history and location data, is incredibly private information but now we share it without thinking about the 
+						possible ramifications if the information got in the hands of someone with malicious intent. <i>Facebook</i> is a great 
+						example of this; it is filled with third party apps and quizzes that in most cases ask for permission to access parts 
+						of your profile, yet no one stops to think why it needs this data. In an episode of the popular dystopian science 
+						fiction show <i>Black Mirror</i> called <i>Be Right Back</i> a woman's partner dies in a car accident. She starts 
+						talking to an artificial intelligence made using her partner's internet presence to be able to accurately represent 
+						his personality. This meant she could talk to a computer who would respond how he would when he was alive. This is 
+						a terrifying idea, but isn’t too far off the realm of possibility as our social lives become more and more digital, 
+						we put more of our personalities online. I challenge you to think about every message, email, snap, whatsapp you have 
+						sent in the last 24 hours. If someone was to get all of these messages what information could they learn? Your sense 
+						of humour, your favourite food, movie, game, or even more sensitive information; bank details, family names or your 
+						home address. While nearly all social medias encrypt your messages it brings back what I mentioned earlier; permission. 
+						If a website can trick you into allowing access to your most personal data these “scam artists” would have successfully 
+						hacked their way into your life. Now these sort of data hacks are easily stopped by clearing an app's permissions or 
+						changing your password, however a shockingly large amount of people don’t fully understand the technology they use 
+						everyday and it is this naivety that hackers rely on in order to get sensitive information. Now data is an issue which 
+						is consistently brought up in government most notably when the founder of <i>Facebook, Mark Zuckerberg</i> went to the 
+						United States Congress to answer claims that <i>Facebook</i> had been mismanaging it’s user’s data. In these 
+						investigations <i>Zuckerberg</i> admitted that all user information exists in <i>Facebook’s</i> databases but they 
+						would never access or share this information as it would be a huge breach of someone’s privacy. However, we’re 
+						hearing more and more news stories of a large site being victim to a cyber attack where millions of user’s data 
+						can be compromised. If this was to happen to a platform as large as <i>Facebook</i> the fallout could be catastrophic. 
+						During this current crisis people are more and more controlled by fear. In Phone Invasion I hope to show how someone 
+						could craft a narrative to get as much data from you as possible. 
+					</p>
+					<hr id="modalHr">
+					<button id="close" class="btn btn-dark">Close</button>
+				</div>
+
+				</div>
+				<img id="phoneInvasionLogo" src="Morgsimages/phone invasion logo.png" alt="Phone Invasion">
+			</section>
+			<section id="quiz">
+				<h1 id="mainTitle">Are You Safe From The Coronavirus?</h1>
+				<a data-toggle="collapse" href="#collapseInformation">Information</a>
+				<div class="collapse" id="collapseInformation">
+					<hr>
+					<p>
+						In this test we will ask you some questions regarding your health and we will do some tests that will require access to 
+						systems such as your microphone and your location. All of this information will be looked through with a complex 
+						artificial intelligence that will look at all your data and decide whether you are safe from the coronavirus. In order 
+						to get the most accurate results please allow access to all systems when asked. If you do not, this test may give you an 
+						incorrect result which may result in you thinking you’re safe when you are in fact at risk.
+					</p>
+				</div>
+				<hr>
+				<form>
+					<div id="questionOne">
+						<h3>Question 1: What Is Your Age?</h3>
+						<hr>
+						<input type="radio"name="age">
+						<label>Under 18</label>
+						<input type="radio" name="age">
+						<label>19-29</label>
+						<input type="radio" name="age">
+						<label>30-45</label>
+						<input type="radio" name="age">
+						<label>46-64</label>
+						<input type="radio" name="age">
+						<label>Over 65</label>
+						<hr>
+					</div>
+					<div id="questionTwo">
+						<h3>Question 2: How At Risk Would You Consider Yourself?</h3>
+						<hr>
+						<input type="radio" name="risk">
+						<label>Low Risk</label>
+						<input type="radio" name="risk">
+						<label>High Risk</label>
+						<input type="radio" name="risk">
+						<label>Not Sure</label>
+						<hr>
+					</div>
+				</form>
+				<div id="questionThree">
+					<h3>Question 3: Where Are You?</h3><br>
+					<a data-toggle="collapse" href="#collapseLocation">Why Do We Need This?</a>
+					<div class="collapse" id="collapseLocation">
+						<hr>
+						<p>
+							In order to get an accurate result on how safe you are we need your location. Different areas of the world are 
+							experiencing more infections than others. Your location will allow our system to see if you are in a high risk area. 
+							WITHOUT THIS INFORMATION YOUR RESULTS MAY BE INCORRECT!
+						</p>
+					</div>
+					<hr>
+					<button class="btn btn-dark" onclick="getLocation()">Give Location</button>
+					<hr>
+				</div>
+				<form>
+					<div id="questionFour">
+						<h3>Question 4: How Many People Live In Your House/Flat?</h3>
+						<hr>
+						<input type="radio" name="occupance">
+						<label>I Live By Myself</label>
+						<input type="radio" name="occupance">
+						<label>1-2</label>
+						<input type="radio" name="occupance">
+						<label>3-5</label>
+						<input type="radio" name="occupance">
+						<label>Over 6</label>
+						<hr>
+					</div>
+					<div id="questionFive">
+						<h3>Question 5: Are You A Keyworker?</h3>
+						<hr>
+						<input type="radio" name="keyworker">
+						<label>Yes In Healthcare</label>
+						<input type="radio" name="keyworker">
+						<label>Yes In Retail</label>
+						<input type="radio" name="keyworker">
+						<label>Yes In Another Industry</label>
+						<input type="radio" name="keyworker">
+						<label for="No">No</label>
+						<hr>
+					</div>
+					<div id="questionSix">
+						<h3>Question 6: How Many Times On Average Do You Leave Your House In A Week?</h3>
+						<hr>
+						<input type="radio" name="outside">
+						<label>Never</label>	
+						<input type="radio" name="outside">
+						<label>Only Once</label>
+						<input type="radio" name="outside">
+						<label>A Couple Of Times</label>
+						<input type="radio" name="outside">
+						<label>Almost Everyday</label>
+						<input type="radio" name="outside">
+						<label>Everyday</label>
+						<hr>
+					</div>
+				</form>
+				<div id="questionSeven">
+					<h3>Question 7: How Is Your Respiratory System?</h3><br>
+					<a data-toggle="collapse" href="#collapseAudio">How This Will Work</a>
+					<div class="collapse" id="collapseAudio">
+						<hr>
+						<p>
+							Coronavirus is a respiratory disease, which can be fatal to people with issues with breathing. This test will ask 
+							you to allow access to the microphone on your device. Upon allowing access please press on the record button and 
+							say something. This sound file will then get put through a deep analysis computer programme, which will analyse 
+							your voice to gather information on the quality of your breathing. The phrase must be longer than a single word so 
+							we highly recommend saying something like your full name and date of birth as that in all cases will ensure the 
+							programme has enough data to work with. WITHOUT THIS INFORMATION YOUR RESULTS MAY BE INCORRECT!
+						</p>
+					</div>
+					<hr>
+					<button class="btn btn-dark" onclick="audioSetup()">Audio Permission</button><br>
+					<p>Allow Access To Microphone</p><br>
+					<button class="btn btn-dark" onclick="audioHack()">Record Audio</button><br>
+					<p>Press This Button And Say Your Name And Date Of Birth</p>
+
+					<hr>
+				</div>
+				<form>
+					<div id="questionEight">
+						<h3>Question 8: Do You Smoke?</h3>
+						<hr>
+						<input type="radio" name="smoke">
+						<label>Yes I'm A Heavy Smoker (10+ A Day)</label>
+						<input type="radio" name="smoke">
+						<label>Yes I'm A Light Smoker (Less Than 10 A Day)</label>
+						<input type="radio" name="smoke">
+						<label>I Don't Smoke</label>
+						<hr>
+					</div>	
+					<div id="questionNine">
+						<h3>Question 9: Have You Been In Contact With Someone Who Has Had A Confirmed Case?</h3>
+						<hr>
+						<input type="radio" name="contact">
+						<label>Yes I Have</label>
+						<input type="radio" name="contact">
+						<label>No I Haven't</label>
+						<input type="radio" name="contact">
+						<label>I'm Not Sure</label>
+						<hr>
+					</div>
+					<div id="questionTen">
+						<h3>Question 10: Have You Done Enough To Keep Yourself Safe?</h3>
+						<input type="radio" name="safe">
+						<label>We'll See</label>
+						<input type="radio" name="safe">
+						<label>We'll See</label>
+						<input type="radio" name="safe">
+						<label>We'll See</label>
+					</div>
+					<hr>
+				</form>
+				<a href="#hackContainer"><button id="footerButton" class="btn btn-dark"  onclick="openHack()">Your Results</button></a>
+			</section>
+			<div id="footer">
+				<p id="declaration" class="text-center"><large>Copyright &copy; <span id="autoDate"></span> Morgan Thomas-Price</large></p>					
+			</div>
+			<div class="form-popup" id="hackContainer">
+				<h1 class="popupTitle">Your Results</h1>
+				<a data-toggle="collapse" href="#collapseDisclaimer">***DISCLAIMER***</a>
+					<div class="collapse" id="collapseDisclaimer">
+						<hr id="popupHr">
+						<p>
+							None of the information you have given is being sent or stored anywhere. This data is session specific and when 
+							you leave the page this information will be automatically lost. The purpose of this exhibit is to show how easy it 
+							is to access sensitive data online. I and all of the other inventors cannot see or access your information.
+						</p>
+					</div>
+					<hr id="popupHr">
+				<h3 id="popupTitle">We Know Where You Are!</h3>
+				<script src="Morgsjs/geolocation.js"></script>
+				<div id="map"></div>
+				<div id="alt"></div>
+				<div id="accurate"></div>
+				<hr id="popupHr">
+				<h3 id="popupTitle">We Know What You've Been Doing!</h3>
+				<div id="messageContainer">
+					<img id="phoneIMG" src="Morgsimages/phone.png">
+				</div>
+				<p id="debug"></p><br>
+				<hr id="popupHr">
+				<h3 id="popupTitle">We Know Your Voice!</h3><br>
+				<button class="btn btn-dark" onclick="playAudio()">Play Recorded Audio</button><br><br>
+				<hr id="popupHr">
+				<script src="Morgsjs/position.js"></script>
+				<script src="Morgsjs/audio.js"></script>
+				<button id="footerButton" class="btn btn-dark" onclick="closeHack()">Close</button>
+			</div>
+			<script src="Morgsjs/script.js"></script>
+			<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+			<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+			<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+		</body>
+	</html>
